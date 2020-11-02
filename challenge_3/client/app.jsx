@@ -64,6 +64,18 @@ class FormOne extends React.Component {
       <div>
         This is form one
         <form onSubmit={this.handleFormOneSubmit}>
+          <label>Name:
+            <input name="name" placeholder="Name"/>
+          </label>
+          <br></br>
+          <label>Email:
+            <input name="email" placeholder="Email"/>
+          </label>
+          <br></br>
+          <label>Password:
+            <input name="password" placeholder="Password"/>
+          </label>
+          <br></br>
           <button>Continue</button>
         </form>
       </div>
@@ -96,6 +108,26 @@ class FormTwo extends React.Component {
       <div>
         This is form two
         <form onSubmit={this.handleFormTwoSubmit}>
+          <label> Address 1:
+            <input name="address1"/>
+          </label>
+          <br></br>
+          <label> Address 2:
+            <input name="address2"/>
+          </label>
+          <br></br>
+          <label> City:
+            <input name="city"/>
+          </label>
+          <br></br>
+          <label> State:
+            <input name="state"/>
+          </label>
+          <br></br>
+          <label> Zip:
+            <input name="zip"/>
+          </label>
+          <br></br>
           <button>Continue</button>
         </form>
       </div>
@@ -128,6 +160,22 @@ class FormThree extends React.Component {
       <div>
         This is form three
         <form onSubmit={this.handleFormThreeSubmit}>
+          <label> Card Number:
+            <input name="card"/>
+          </label>
+          <br></br>
+          <label> Expiration:
+            <input name="expiration"/>
+          </label>
+          <br></br>
+          <label> CVV:
+            <input name="cvv"/>
+          </label>
+          <br></br>
+          <label> Billing Zip:
+            <input name="billing"/>
+          </label>
+          <br></br>
           <button>Continue</button>
         </form>
       </div>
