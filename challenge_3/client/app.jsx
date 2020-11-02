@@ -14,10 +14,10 @@ class Homepage extends React.Component {
     this.state = {
       showFormOne: false
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleHomepageSubmit = this.handleHomepageSubmit.bind(this);
   }
 
-  handleSubmit(event) {
+  handleHomepageSubmit(event) {
     event.preventDefault();
     this.setState({
       showFormOne: true
@@ -33,7 +33,7 @@ class Homepage extends React.Component {
     return (
       <div>
         This is the homepage
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleHomepageSubmit}>
           <button>Checkout</button>
         </form>
       </div>
@@ -48,10 +48,10 @@ class FormOne extends React.Component {
     this.state = {
       showFormTwo: false
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFormOneSubmit = this.handleFormOneSubmit.bind(this);
   }
 
-  handleSubmit(event) {
+  handleFormOneSubmit(event) {
     event.preventDefault();
     this.setState({
       showFormTwo: true
@@ -63,7 +63,7 @@ class FormOne extends React.Component {
     return(
       <div>
         This is form one
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleFormOneSubmit}>
           <button>Continue</button>
         </form>
       </div>
@@ -80,10 +80,10 @@ class FormTwo extends React.Component {
     this.state = {
       showFormThree: false
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFormTwoSubmit = this.handleFormTwoSubmit.bind(this);
   }
 
-  handleSubmit(event) {
+  handleFormTwoSubmit(event) {
     event.preventDefault();
     this.setState({
       showFormTwo: true
@@ -95,7 +95,7 @@ class FormTwo extends React.Component {
     return(
       <div>
         This is form two
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleFormTwoSubmit}>
           <button>Continue</button>
         </form>
       </div>
@@ -105,15 +105,69 @@ class FormTwo extends React.Component {
 }
 
 
-
-
-
 // form three for user to enter credit card information
-const FormThree = () => (
-  <div>
-    This is form three
-  </div>
-)
+class FormThree extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showSummary: false
+    }
+    this.handleFormThreeSubmit = this.handleFormThreeSubmit.bind(this);
+  }
+
+  handleFormThreeSubmit(event) {
+    event.preventDefault();
+    this.setState({
+      showFormTwo: true
+    })
+    ReactDOM.render(<Summary />, document.getElementById('app'))
+  }
+
+  render() {
+    return(
+      <div>
+        This is form three
+        <form onSubmit={this.handleFormThreeSubmit}>
+          <button>Continue</button>
+        </form>
+      </div>
+
+    )
+  }
+}
+
+
+// Summary Page which renders all of the previous information
+class Summary extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showHomepage: false
+    }
+
+    this.handleSummarySubmit = this.handleSummarySubmit.bind(this);
+  }
+
+  handleSummarySubmit(event) {
+    event.preventDefault();
+    this.setState({
+      showHomepage: true
+    })
+    ReactDOM.render(<Homepage />, document.getElementById('app'))
+  }
+
+  render() {
+    return(
+      <div>
+        this is the summary page
+        <form onSubmit={this.handleSummarySubmit}>
+          <button>Submit</button>
+        </form>
+      </div>
+    )
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById('app'));
 
