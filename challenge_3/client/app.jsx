@@ -288,33 +288,33 @@ class Summary extends React.Component {
   render() {
     return(
       <div>
-          <p>
-            <h2>Summary</h2>
-            <h4>Account</h4>
-            Name: {this.state.result.name}
-            <br></br>
-            Email: {this.state.result.email}
-            <br></br>
-            Password: {this.state.result.password}
-            <br></br>
-            <h4>Address</h4>
-            Address: {this.state.result.address}
-            <br></br>
-            City: {this.state.result.city}
-            <br></br>
-            State: {this.state.result.state}
-            <br></br>
-            Zip: {this.state.result.zip}
-            <br></br>
-            <h4>Card Info</h4>
-            Card Number: {this.state.result.number}
-            <br></br>
-            Expiration: {this.state.result.Expiration}
-            <br></br>
-            CVV: {this.state.result.cvv}
-            <br></br>
-            Billing Zip: {this.state.result.billing}
-          </p>
+        <p>
+          <h2>Summary</h2>
+          <h4>Account</h4>
+          Name: {this.state.result.name}
+          <br></br>
+          Email: {this.state.result.email}
+          <br></br>
+          Password: {this.state.result.password}
+          <br></br>
+          <h4>Address</h4>
+          Address: {this.state.result.address}
+          <br></br>
+          City: {this.state.result.city}
+          <br></br>
+          State: {this.state.result.state}
+          <br></br>
+          Zip: {this.state.result.zip}
+          <br></br>
+          <h4>Card Info</h4>
+          Card Number: {this.state.result.number}
+          <br></br>
+          Expiration: {this.state.result.Expiration}
+          <br></br>
+          CVV: {this.state.result.cvv}
+          <br></br>
+          Billing Zip: {this.state.result.billing}
+        </p>
         <form onSubmit={this.handleSummarySubmit}>
           <button>Purchase</button>
         </form>
