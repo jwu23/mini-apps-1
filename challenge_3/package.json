@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon ./server.js",
     "open": "live-server --open=./public/index.html",
     "babel": "./node_modules/.bin/babel client --out-dir public --presets @babel/preset-react --source-maps inline --watch"
   },
