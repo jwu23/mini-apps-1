@@ -1,2 +1,32 @@
-
-
+<html>
+  <head>
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <table id="myTable">
+      <th></th>
+      <th id="alert">New Game</th>
+      <th></th>
+      <tr>
+        <td id="cell0" onClick="handleClick(this.id)"></td>
+        <td id="cell1" onClick="handleClick(this.id)"></td>
+        <td id="cell2" onClick="handleClick(this.id)"></td>
+      </tr>
+      <tr>
+        <td id="cell3" onClick="handleClick(this.id)"></td>
+        <td id="cell4" onClick="handleClick(this.id)"></td>
+        <td id="cell5" onClick="handleClick(this.id)"></td>
+      </tr>
+      <tr>
+        <td id="cell6" onClick="handleClick(this.id)"></td>
+        <td id="cell7" onClick="handleClick(this.id)"></td>
+        <td id="cell8" onClick="handleClick(this.id)"></td>
+      </tr>
+    </table>
+    <form onSubmit="resetTable(event)">
+      <button>Reset</button>
+    </form>
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+</html>
