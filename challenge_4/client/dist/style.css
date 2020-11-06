@@ -1,0 +1,14 @@
+td {
+  border: 1px solid black;
+  border-radius: 25px;
+  height: 50px;
+  width: 50px;
+}
+
+#player1 {
+  background-color: red;
+}
+
+#player2 {
+  background-color: yellow;
+}
